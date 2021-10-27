@@ -1,1 +1,12 @@
-<p>hero-detail works!</p>
+
+<!--I used *ngIf to conditionally include or exclude a block of HTML.-->
+<div *ngIf="hero"> <!--verify is selectedHero exists-->
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  </div>
+
+</div>
